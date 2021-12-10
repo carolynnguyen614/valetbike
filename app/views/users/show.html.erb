@@ -14,6 +14,7 @@
     <%#    <%= link_to('User List', {:controller => 'users', :action => 'index' }, :class => 'nav-link') %>
         <%= link_to('Membership Purchase', {:controller => 'payments', :action => 'index' }, :class => 'btn btn-payments nav-link') %>
         <a class="nav-link active" href="#">User Profile</a>
+        <%= link_to("Return a Bike", "/return_bike", :class => 'nav-link') %>
       </div>
     </div>
   </div>
@@ -27,6 +28,7 @@
       <th>Email</th>
       <th>First name</th>
       <th>Last name</th>
+      <th>Current Membership</th>
     </tr>
   </thead>
 
@@ -35,6 +37,7 @@
       <td><%= @user.email %></td>
       <td><%= @user.first_name %></td>
       <td><%= @user.last_name %></td>
+      <td><%= @user.membership %></td>
     </tr>
   </tbody>
 </table>
